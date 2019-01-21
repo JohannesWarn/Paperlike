@@ -11,6 +11,7 @@
 		0C7F342221F5C47D00B50B96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F342121F5C47D00B50B96 /* ViewController.swift */; };
 		0C7F342421F5C47D00B50B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7F342321F5C47D00B50B96 /* Assets.xcassets */; };
 		0C7F342721F5C47D00B50B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7F342521F5C47D00B50B96 /* Main.storyboard */; };
+		0C7F343021F5C86000B50B96 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 0C7F342F21F5C86000B50B96 /* style.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		0C7F342621F5C47D00B50B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C7F342821F5C47D00B50B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7F342921F5C47D00B50B96 /* Paperlike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Paperlike.entitlements; sourceTree = "<group>"; };
+		0C7F342F21F5C86000B50B96 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				0C7F341F21F5C47D00B50B96 /* AppDelegate.swift */,
 				0C7F342121F5C47D00B50B96 /* ViewController.swift */,
+				0C7F342F21F5C86000B50B96 /* style.css */,
 				0C7F342321F5C47D00B50B96 /* Assets.xcassets */,
 				0C7F342521F5C47D00B50B96 /* Main.storyboard */,
 				0C7F342821F5C47D00B50B96 /* Info.plist */,
@@ -95,6 +98,11 @@
 				TargetAttributes = {
 					0C7F341B21F5C47D00B50B96 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -122,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C7F342421F5C47D00B50B96 /* Assets.xcassets in Resources */,
+				0C7F343021F5C86000B50B96 /* style.css in Resources */,
 				0C7F342721F5C47D00B50B96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +280,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Paperlike/Paperlike.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 698M8KLQF7;
@@ -290,7 +298,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Paperlike/Paperlike.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 698M8KLQF7;

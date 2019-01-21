@@ -1,0 +1,19 @@
+#docs-chrome,
+.docs-explore-widget,
+.kix-document-top-shadow,
+.companion-collapser-button-container,
+.docs-ruler {
+    display: none !important;
+}
+
+.kix-appview-editor-container {
+    background: white !important;
+}
+
+.kix-paginateddocumentplugin {
+    box-shadow: none !important;
+}
+
+.kix-page-compact::before {
+    border: none !important;
+}
