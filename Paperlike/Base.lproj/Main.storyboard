@@ -431,22 +431,42 @@
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="4vQ-ZB-BGc"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="ZtE-zy-Mkn"/>
-                                <toolbarItem implicitItemIdentifier="04FFDC41-DDB4-45FA-A1E5-0648C7BBF6D9" label="Normal Text" paletteLabel="Normal Text" sizingBehavior="auto" id="qUd-TM-4QV" userLabel="Normal Text">
+                                <toolbarItem implicitItemIdentifier="04FFDC41-DDB4-45FA-A1E5-0648C7BBF6D9" label="Back" paletteLabel="Back" image="NSGoLeftTemplate" id="qUd-TM-4QV">
                                     <nil key="toolTip"/>
+                                    <size key="minSize" width="42" height="32"/>
+                                    <size key="maxSize" width="42" height="32"/>
                                     <button key="view" verticalHuggingPriority="750" id="3WI-So-hAZ">
                                         <rect key="frame" x="0.0" y="14" width="82" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" title="Aa" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bmh-Dh-JNE">
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoLeftTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bmh-Dh-JNE">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="normalTextWithSender:" target="Oky-zY-oP4" id="lm3-O8-jUL"/>
+                                            <action selector="goBackWithSender:" target="Oky-zY-oP4" id="K7r-Oc-9Ux"/>
                                         </connections>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="B260C40B-8B24-47DB-84CE-C596EB6BC532" label="Heading 1" paletteLabel="Heading 1" sizingBehavior="auto" id="Nhl-T2-WDP">
+                                <toolbarItem implicitItemIdentifier="547D9D6F-C4F9-4325-9B83-253C97BC93FB" label="Normal Text" paletteLabel="Normal Text" id="R94-Wz-4jo" userLabel="Normal Text">
                                     <nil key="toolTip"/>
+                                    <size key="minSize" width="52" height="32"/>
+                                    <size key="maxSize" width="52" height="32"/>
+                                    <button key="view" verticalHuggingPriority="750" id="PkM-zv-n6L">
+                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Aa" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FXX-6S-v76">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="normalTextWithSender:" target="Oky-zY-oP4" id="p81-Ow-Vuh"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="B260C40B-8B24-47DB-84CE-C596EB6BC532" label="Heading 1" paletteLabel="Heading 1" id="Nhl-T2-WDP">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="52" height="32"/>
+                                    <size key="maxSize" width="52" height="32"/>
                                     <button key="view" verticalHuggingPriority="750" id="Sco-XO-Lwk">
                                         <rect key="frame" x="0.0" y="14" width="82" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -459,8 +479,10 @@
                                         </connections>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="FBC8ACC6-CA8B-4682-BD25-5E63D59D7967" label="Heading 2" paletteLabel="Heading 2" sizingBehavior="auto" id="osk-W5-Ro5">
+                                <toolbarItem implicitItemIdentifier="FBC8ACC6-CA8B-4682-BD25-5E63D59D7967" label="Heading 2" paletteLabel="Heading 2" id="osk-W5-Ro5">
                                     <nil key="toolTip"/>
+                                    <size key="minSize" width="52" height="32"/>
+                                    <size key="maxSize" width="52" height="32"/>
                                     <button key="view" verticalHuggingPriority="750" id="p41-wc-GqC">
                                         <rect key="frame" x="0.0" y="14" width="82" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -473,8 +495,10 @@
                                         </connections>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="0C581DCD-493E-482B-892B-1A988D024E22" label="Heading 3" paletteLabel="Heading 3" sizingBehavior="auto" id="JeJ-Tc-Ew4">
+                                <toolbarItem implicitItemIdentifier="0C581DCD-493E-482B-892B-1A988D024E22" label="Heading 3" paletteLabel="Heading 3" id="JeJ-Tc-Ew4">
                                     <nil key="toolTip"/>
+                                    <size key="minSize" width="52" height="32"/>
+                                    <size key="maxSize" width="52" height="32"/>
                                     <button key="view" verticalHuggingPriority="750" id="FNP-Ff-t2x">
                                         <rect key="frame" x="0.0" y="14" width="82" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -487,14 +511,66 @@
                                         </connections>
                                     </button>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="8F3BA7ED-0E6E-48AC-B9EA-760A9BDCEFF5" label="Bold" paletteLabel="Bold" id="R64-kJ-xMu">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="52" height="32"/>
+                                    <size key="maxSize" width="52" height="32"/>
+                                    <button key="view" verticalHuggingPriority="750" id="K38-BT-4q3">
+                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="B" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vaS-WI-9mK">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="boldTextWithSender:" target="Oky-zY-oP4" id="Gge-gP-ioF"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="51D5325D-8788-46F1-8A0A-C7862135AD02" label="Italics" paletteLabel="Italics" id="aCb-5x-jly">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="52" height="32"/>
+                                    <size key="maxSize" width="52" height="32"/>
+                                    <button key="view" verticalHuggingPriority="750" id="X8S-4G-NFu">
+                                        <rect key="frame" x="0.0" y="14" width="82" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="i" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Em8-Ns-mF8">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="italicTextWithSender:" target="Oky-zY-oP4" id="7b6-KI-Zaz"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="95F469D9-DA5C-4635-9BFA-55372D2F331E" label="Open in Browser" paletteLabel="Open in Browser" image="NSShareTemplate" id="4zV-0m-DSm">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="52" height="32"/>
+                                    <size key="maxSize" width="52" height="32"/>
+                                    <button key="view" verticalHuggingPriority="750" id="M9z-ca-YWE" userLabel="Open in Browser">
+                                        <rect key="frame" x="6" y="14" width="82" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSShareTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="afA-Vy-PWu">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="openInBrowserWithSender:" target="Oky-zY-oP4" id="KbC-xj-sMJ"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="ZtE-zy-Mkn"/>
                                 <toolbarItem reference="qUd-TM-4QV"/>
+                                <toolbarItem reference="ZtE-zy-Mkn"/>
+                                <toolbarItem reference="R94-Wz-4jo"/>
                                 <toolbarItem reference="Nhl-T2-WDP"/>
                                 <toolbarItem reference="osk-W5-Ro5"/>
                                 <toolbarItem reference="JeJ-Tc-Ew4"/>
+                                <toolbarItem reference="R64-kJ-xMu"/>
+                                <toolbarItem reference="aCb-5x-jly"/>
                                 <toolbarItem reference="ZtE-zy-Mkn"/>
+                                <toolbarItem reference="4zV-0m-DSm"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
@@ -523,4 +599,8 @@
             <point key="canvasLocation" x="75" y="879"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+        <image name="NSShareTemplate" width="11" height="16"/>
+    </resources>
 </document>

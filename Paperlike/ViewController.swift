@@ -59,23 +59,36 @@ class ViewController: NSViewController {
         webView.frame = view.bounds
     }
 
+    @IBAction func goBack(sender: NSButton) {
+        webView.goBack()
+    }
+    
+    @IBAction func openInBrowser(sender: NSButton) {
+        NSWorkspace.shared.open(webView.url!)
+    }
+    
     @IBAction func normalText(sender: NSButton) {
-        pressModifiedKey(withKeyCode: 0x1D)
+        pressModifiedKey(withKeyCode: 0x1D, optionDown: true)
     }
     
     @IBAction func header1Text(sender: NSButton) {
-        pressModifiedKey(withKeyCode: 0x12)
+        pressModifiedKey(withKeyCode: 0x12, optionDown: true)
     }
-    
     @IBAction func header2Text(sender: NSButton) {
-        pressModifiedKey(withKeyCode: 0x13)
+        pressModifiedKey(withKeyCode: 0x13, optionDown: true)
     }
-    
     @IBAction func header3Text(sender: NSButton) {
-        pressModifiedKey(withKeyCode: 0x14)
+        pressModifiedKey(withKeyCode: 0x14, optionDown: true)
     }
     
-    func pressModifiedKey(withKeyCode keyCode: CGKeyCode) {
+    @IBAction func boldText(sender: NSButton) {
+        pressModifiedKey(withKeyCode: 0x0B, optionDown: false)
+    }
+    @IBAction func italicText(sender: NSButton) {
+        pressModifiedKey(withKeyCode: 0x22, optionDown: false)
+    }
+    
+    func pressModifiedKey(withKeyCode keyCode: CGKeyCode, optionDown: Bool) {
         let src = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
         
         let cmdd = CGEvent(keyboardEventSource: src, virtualKey: 0x38, keyDown: true)
@@ -85,14 +98,18 @@ class ViewController: NSViewController {
         let keyd = CGEvent(keyboardEventSource: src, virtualKey: keyCode, keyDown: true)
         let keyu = CGEvent(keyboardEventSource: src, virtualKey: keyCode, keyDown: false)
         
-        keyd?.flags = [CGEventFlags.maskCommand, CGEventFlags.maskAlternate]
+        if (optionDown) {
+            keyd?.flags = [CGEventFlags.maskCommand, CGEventFlags.maskAlternate]
+        } else {
+            keyd?.flags = [CGEventFlags.maskCommand]
+        }
         
         let loc = CGEventTapLocation.cghidEventTap
         
         cmdd?.post(tap: loc)
-        optd?.post(tap: loc)
+        if (optionDown) { optd?.post(tap: loc) }
         keyd?.post(tap: loc)
-        optu?.post(tap: loc)
+        if (optionDown) { optu?.post(tap: loc) }
         cmdu?.post(tap: loc)
         keyu?.post(tap: loc)
     }
