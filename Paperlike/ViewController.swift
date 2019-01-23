@@ -9,7 +9,7 @@
 import Cocoa
 import WebKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, WKNavigationDelegate {
 
     lazy var webView: WKWebView = {
         guard
@@ -46,7 +46,23 @@ class ViewController: NSViewController {
         view.addSubview(webView)
         webView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Safari/605.1.15"
         webView.allowsBackForwardNavigationGestures = true
-        webView.load(URLRequest(url: URL(string: "https://docs.google.com/")!))
+        webView.load(URLRequest(url: URL(string: "https://drive.google.com/drive/team-drives")!))
+        webView.navigationDelegate = self
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if navigationAction.targetFrame == nil {
+            decisionHandler(.cancel)
+            if let url = navigationAction.request.url {
+                if url.absoluteString.contains("https://docs.google") {
+                    webView.load(navigationAction.request)
+                } else {
+                    NSWorkspace.shared.open(url)
+                }
+            }
+            return
+        }
+        decisionHandler(.allow)
     }
 
     override var representedObject: Any? {
